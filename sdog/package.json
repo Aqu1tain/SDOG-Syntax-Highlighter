@@ -1,0 +1,25 @@
+{
+  "name": "sdog",
+  "displayName": "SDOG Syntax Highlighting",
+  "description": "SDOG is a hypertext markeup language and stands for Structured Document Oriented Guide",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "sdog",
+      "aliases": ["Seadog", "sdog"],
+      "extensions": ["sdog","sdogx"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "sdog",
+      "scopeName": "source.sdog",
+      "path": "./syntaxes/sdog.tmLanguage.json"
+    }]
+  }
+}

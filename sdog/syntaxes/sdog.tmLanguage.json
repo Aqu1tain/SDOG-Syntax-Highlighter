@@ -1,32 +1,64 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Seadog",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.sdog",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.sdog",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.sdog",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.sdog"
+    "scopeName": "source.sdog",
+    "patterns": [
+        {
+            "name": "comment.line.double-slash.sdog",
+            "begin": "//",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.sdog"
+                }
+            },
+            "end": "$",
+            "patterns": [
+                {
+                    "match": ".",
+                    "name": "comment.line.sdog"
+                }
+            ]
+        },
+        {
+            "name": "meta.tag.sdog",
+            "begin": "<",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.tag.begin.sdog"
+                }
+            },
+            "end": ">",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.tag.end.sdog"
+                }
+            },
+            "patterns": [
+                {
+                    "name": "entity.name.tag.sdog",
+                    "match": "[a-zA-Z0-9_-]+"
+                }
+            ]
+        },
+        {
+            "name": "meta.tag.sdog",
+            "begin": "</",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.tag.begin.sdog"
+                }
+            },
+            "end": ">",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.tag.end.sdog"
+                }
+            },
+            "patterns": [
+                {
+                    "name": "entity.name.tag.sdog",
+                    "match": "[a-zA-Z0-9_-]+"
+                }
+            ]
+        }
+    ],
+    "uuid": "10b70d72-a826-4ef8-a896-b801c6ee68c0"
 }

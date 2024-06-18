@@ -1,65 +1,70 @@
-# sdog README
+# SDOG Syntax Highlighting for VS Code
 
-This is the README for your extension "sdog". After writing up a brief description, we recommend including the following sections.
+This extension provides syntax highlighting and custom file icons for SDOG (Sea Dog Overseeing Guide) and SDOGX files in Visual Studio Code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Syntax Highlighting**: Highlighting for SDOG-specific tags and comments.
+- **Custom File Icons**: Unique icons for `.sdog` and `.sdogx` files.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+To install the SDOG Syntax Highlighting extension, follow these steps:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Clone the repository or download the source code.
+2. Open the folder in Visual Studio Code.
+3. Run `npm install` to install dependencies.
+4. Press `F5` to open a new VS Code window with the extension loaded.
 
-## Requirements
+## Usage
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Once installed, any file with the `.sdog` or `.sdogx` extension will be highlighted according to SDOG syntax rules.
 
-## Extension Settings
+### Supported Tags
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+The extension supports the following SDOG tags:
 
-For example:
+- `<boat>`
+- `<crowsnest>`
+- `<deck>`
+- `<parley>`
+- `<cap>`
+- `<mate>`
+- `<crew>`
+- `<cm>` (Ordered list item)
+- `<cl>` (Unordered list item)
+- `<painting>`
+- `<foot>`
+- `<shiplog>`
 
-This extension contributes the following settings:
+### Comments
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+SDOG uses `//` for line comments.
 
-## Known Issues
+### Sample SDOG File
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+```html
+<boat>
+  <crowsnest>
+    // This is the header
+  </crowsnest>
+  <deck>
+    <parley>
+      <cap>Welcome to SDOG!</cap>
+      <mate>Let's build a pirate-themed document.</mate>
+    </parley>
+    <crew>
+      <cm>Ordered list item 1</cm>
+      <cm>Ordered list item 2</cm>
+    </crew>
+    <crew>
+      <cl>Unordered list item 1</cl>
+      <cl>Unordered list item 2</cl>
+    </crew>
+    <painting src="image.jpg" />
+    <foot href="http://example.com">Link</foot>
+  </deck>
+  <shiplog>
+    // Footer content
+  </shiplog>
+</boat>

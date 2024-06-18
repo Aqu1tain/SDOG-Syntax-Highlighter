@@ -1,8 +1,11 @@
 {
   "name": "sdog",
-  "displayName": "SDOG Syntax Highlighting",
-  "description": "SDOG is a hypertext markeup language and stands for Structured Document Oriented Guide",
-  "version": "0.0.1",
+  "displayName": "SDOG Syntax Highlighting",
+  "description": "Provides Syntax Highlighting for SDOG Files",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "icon": "images/sea-dog-logo.png",
+  "publisher": "Akitain",
   "engines": {
     "vscode": "^1.90.0"
   },
